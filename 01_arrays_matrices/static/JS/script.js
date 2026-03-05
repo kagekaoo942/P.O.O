@@ -32,8 +32,83 @@ Accede al número 3 y súmale 2 directamente en la operación de concatenación.
 Construye la frase: "5 gatos negros duermen plácidamente".
 Muestra el resultado con alert().*/
 function reordenar() {
-    let datos = [3, "gatos", "negros", "duermen"]
-    datos[0] += 2
-    alert(datos.join(" "))
+    let datos = [3, "gatos", "negros", "duermen"];
+    datos[0] += 2;
+    datos.push("Placidamente.");
+    alert(datos.join(" "));
+}
+/*Ejercicio 4: Coordenadas en la Matriz (Suma Simple)
+Instrucciones: En una función, define:
+JavaScript
+let matriz = [
+  [10, 20],
+  [30, 40]
+];
+Accede al número 10 y al 40.
+Suma ambos valores y muestra el resultado con un alert() que explique qué posiciones sumaste (ej: "Suma de [0][0] y [1][1]").*/
+function coordenadaMatriz() {
+    let matriz = [
+        [10, 20],
+        [30, 40]
+    ];
+    let suma = matriz[0][0] + matriz[1][1]
+    alert(`suma de ${matriz[0][0]} y ${matriz[1][1]} da un total de ${suma}.`)
+}
+/* Ejercicio 5: El Intruso en la Tercera Dimensión
+Instrucciones: Crea una función con la matriz: let datos = [1, [2, [3, 4]]];.
+Accede al número 4.
+Usa .push() para agregar el número 5 al mismo sub-arreglo donde está el 4.
+Muestra la matriz completa en un alert().
+*/
+function operarIntruso() {
+    let datos = [1, [2, [3, 4]]];
+    datos[1][1][1].push(5);
+    alert(datos);
+}
+/*Ejercicio 6: Traductor de Acciones (Matriz + Arreglo)
+Instrucciones: Define let sujetos = ["El programador", "La computadora"]; y una matriz let verbos = [["codifica", "analiza"], ["falla", "reinicia"]];.
+Crea una función que tome a "El programador" y la acción "analiza".
+Concatena la frase y lánzala por alert().
+*/
+function traducirAcciones() {
+    let sujetos = ["El programador", "La computadora"];
+    let verbos = [["codifica", "analiza"], ["falla", "reinicia"]];
+    alert(`${sujetos[0]} ${verbos[0][1]}`)
+}
+/*Ejercicio 7: Limpieza de Datos (Pop y Unshift)
+Instrucciones: Tienes el arreglo let inventario = ["Error", "Laptop", "Mouse", "Teclado", "Virus"];.
+Elimina el primer elemento ("Error") y el último ("Virus").
+Agrega "Monitor" al inicio.
+Muestra el inventario final con alert().
+*/ 
+function limpiarDatos(){
+    let inventario = ["Error", "Laptop", "Mouse", "Teclado", "Virus"];
+    inventario.shift()
+    inventario.pop()
+    inventario.unshift("Monitor")
+    alert(`${inventario.join(" - ")}`)
+}
+/*Ejercicio 8: La Matriz de Identidad Modificada
+Instrucciones: Define una matriz de 3x3 llena de ceros.
+JavaScript
+let tablero = [
+  [0, 0, 0],
+  [0, 0, 0],
+  [0, 0, 0]
+];
 
+Cambia todos los ceros de la diagonal principal (superior izquierda a inferior derecha) por el número 1.
+Muestra el resultado de la fila central por alert().
+[0], [1][1], and [2][2]]
+*/ 
+function matrizIdentificada(){
+    let tablero = [
+  [0, 0, 0],
+  [0, 0, 0],
+  [0, 0, 0]
+];
+tablero[0][0] = 1;
+tablero[1][1] = 1;
+tablero[2][2] = 1;
+alert(tablero)
 }
