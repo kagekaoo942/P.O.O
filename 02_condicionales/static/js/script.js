@@ -3,23 +3,28 @@ Crea una variable edad. Si la edad es 18 o más, muestra por consola: "Acceso pe
 */
 function ingresarEdad() {
     let edad = parseInt(prompt("Ingrese su edad: "));
-    if (edad >= 18) {
-        alert("Acceso permitido a la App")
-    }else{
-        alert("Acceso denegado: necesitas ser mayor de edad")
-    }
+} if (edad < 0 && edad >= 130) {
+    alert("Ingrese un valor valido")
+} else if (edad >= 18) {
+    alert("Acceso permitido a la App")
+} else if (edad <= 17 && edad > 0) {
+    alert("Acceso denegado: necesitas ser mayor de edad")
+} else {
+    alert("Ingrese un valor valido")
 }
+
 /*2. Validador de Nombres
 Declara una variable nombre.
 Si el nombre no está vacío, crea un arreglo llamado usuarios y agrega el nombre usando .push()
 Si está vacío, muestra: "Error: El nombre no puede estar en blanco".
 */
-function ingresarNombre(){
-    let nombre = prompt("Ingrese su nombre: ")
-    let usuarios = nombre;
-    if(nombre = ""){
-        alert(`Bienvenido ${usuarios}`)
-    }else{
-        alert("Error: El nombre no puede estar en blanco")
+function validarNombre() {
+    let nombre = prompt("Ingrese su nombre: ");
+    let usuarios = [];
+    if (nombre !== "") {
+        usuarios.push(nombre);
+        alert(`Hola ${usuarios}`);
+    } else {
+        alert("Error: El nombre no puede estar en blanco");
     }
-}
+};
