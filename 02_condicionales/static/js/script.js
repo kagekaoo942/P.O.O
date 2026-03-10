@@ -22,6 +22,7 @@ function validarNombre() {
     let nombre = prompt("Ingrese su nombre: ");
     let usuarios = [];
     if (nombre !== "") {
+        // añade el elemento al final del array
         usuarios.push(nombre);
         alert(`Hola ${usuarios}`);
     } else {
