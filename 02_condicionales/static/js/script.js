@@ -16,9 +16,9 @@ Si está vacío, muestra: "Error: El nombre no puede estar en blanco".
 */
 function ingresarNombre(){
     let nombre = prompt("Ingrese su nombre: ")
-    let usuarios;
-    if(nombre = usuarios){
-        alert(usuarios.push(usuarios))
+    let usuarios = nombre;
+    if(nombre = ""){
+        alert(`Bienvenido ${usuarios}`)
     }else{
         alert("Error: El nombre no puede estar en blanco")
     }
