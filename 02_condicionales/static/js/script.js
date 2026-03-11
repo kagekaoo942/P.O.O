@@ -170,14 +170,12 @@ function maestroVisitas() {
         alert("Error: el momento nombre puede estar vacío. ")
     } else if (esVip == 0) {
         bitacora.unshift(nombreVista);
-        alert(`Agregado correctamente a la lista: \n${bitacora.join(", ")}\nPersonas en:${bitacora.length}`); {
-        }else if (esVip == 1) {
-            bitacora.push(nombreVista);
-            alert(`Agregado correctamente a la lista: \n${bitacora.jpin(", ")}\nPersonas en total: ${bitacora.length}`); {
-
-            }else {
-                alert("Ingrese valores válidos.")
-            }
-        }
+        alert(`Agregado correctamente a la lista:\n${bitacora.join(", ")}\nPersonas en total:${bitacora.length}`);
+    } else if (esVip == 1) {
+        bitacora.push(nombreVista);
+        alert(`Agregado correctamente a la lista:\n${bitacora.join(", ")}\nPersonas en total:${bitacora.length}`);
+    } else {
+        alert("Ingrese valores válidos.")
     }
 }
+
