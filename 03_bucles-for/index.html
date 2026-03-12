@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- autor del documento -->
+     <meta name="author" content="martinacevedo@liceovvh.cl">
+    <title>condicionales</title>
+    <!-- estilo boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>condicionales</h1>
+    <main class="contenedor p-2 d-flex gap-3 flex-wrap">
+        <!-- ejercicio 1 -->
+        <div class="card" style="width: 18rem;">
+            <img src="" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Ejercicio 1:</h5>
+                <p class="card-text">Contador en pantalla.</p>
+                <a href="#" class="btn btn-primary" onclick="contadorPantalla()">Ejecutar</a>
+                <div id="resultadoContainer" class="mt-4 d-none">
+                    <h5>Resultado:</h5>
+                    <div id="result1" class="alert alert-success fw-bold"></div>
+                </div>
+            </div>
+        </div>
+        <!-- ejercicio 2 -->
+        <div class="card" style="width: 18rem;">
+            <img src="" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Ejercicio 2:</h5>
+                <p class="card-text">Lista de Asistencia Automática</p>
+                <a href="#" class="btn btn-primary" onclick="asistenciaAutomatica()">Ejecutar</a>
+                <div id="resultadoContainer2" class="mt-4 d-none">
+                    <h5>Resultado:</h5>
+                    <div id="result2" class="alert alert-success fw-bold"></div>
+                </div>
+            </div>
+        </div>
+        <!-- ejericio 3 -->
+        <div class="card" style="width: 18rem;">
+            <img src="" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Ejercicio 3:</h5>
+                <p class="card-text">Buscador de Aprobados (Escala 1 a 7)</p>
+                <a href="#" class="btn btn-primary" onclick="buscarAprobados()">Ejecutar</a>
+                <div id="resultadoContainer3" class="mt-4 d-none">
+                    <h5>Resultado:</h5>
+                    <div id="result3" class="alert alert-success fw-bold"></div>
+                </div>
+            </div>
+        </div>
+        <!-- ejericio 4 -->
+        <div class="card" style="width: 18rem;">
+            <img src="" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Ejercicio 4:</h5>
+                <p class="card-text">El Filtro de Inventario</p>
+                <a href="#" class="btn btn-primary" onclick="controlStock()">Ejecutar</a>
+                <div id="resultadoContainer4" class="mt-4 d-none">
+                    <h5>Resultado:</h5>
+                    <div id="result4" class="alert alert-success fw-bold"></div>
+                </div>
+            </div>
+        </div>
+        <!-- ejericio 5 -->
+        <div class="card" style="width: 18rem;">
+            <img src="" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Ejercicio 5:</h5>
+                <p class="card-text">Sumando la Colecta</p>
+                <p class="card-text">Sumando colecta</p>
+                <a href="#" class="btn btn-primary" onclick="sumandoColecta()">Ejecutar</a>
+                <div id="resultadoContainer5" class="mt-4 d-none">
+                    <h5>Resultado:</h5>
+                    <div id="result5" class="alert alert-success fw-bold"></div>
+                </div>
+                <!-- ejericio 6 -->
+                <div class="card" style="width: 18rem;">
+                    <img src="" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> Ejercicio 6:</h5>
+                        <p class="card-text">Formateador de Nombres VIP</p>
+                        <a href="#" class="btn btn-primary" onclick="FormateadorNombre()">Ejecutar</a>
+                        <div id="resultadoContainer6" class="mt-4 d-none">
+                            <h5>Resultado:</h5>
+                            <div id="result6" class="alert alert-success fw-bold"></div>
+                        </div>
+                    </div>
+                    <!-- ejericio 7 -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"> Ejercicio 7:</h5>
+                            <p class="card-text">El Buscador de Stock Específico</p>
+                            <a href="#" class="btn btn-primary" onclick="BuscarStock()">Ejecutar</a>
+                            <div id="resultadoContainer7" class="mt-4 d-none">
+                                <h5>Resultado:</h5>
+                                <div id="result7" class="alert alert-success fw-bold"></div>
+                            </div>
+                        </div>
+                        <!-- ejericio 8 -->
+                        <div class="card" style="width: 18rem;">
+                            <img src="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"> Ejercicio 8:</h5>
+                                <p class="card-text">Generador de Párrafos de Advertencia</p>
+                                <a href="#" class="btn btn-primary" onclick="generadorParrafos()">Ejecutar</a>
+                                <div id="resultadoContainer8" class="mt-4 d-none">
+                                    <h5>Resultado:</h5>
+                                    <div id="result8" class="alert alert-success fw-bold"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ejericio 9 -->
+                        <div class="card" style="width: 18rem;">
+                            <img src="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"> Ejercicio 9:</h5>
+                                <p class="card-text">El Almacén de Matrices (2D Arrays)</p>
+                                <a href="#" class="btn btn-primary" onclick="almacenMatrices()">Ejecutar</a>
+                            </div>
+                        </div>
+                        <!-- ejericio 10 -->
+                        <div class="card" style="width: 18rem;">
+                            <img src="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"> Ejercicio 10:</h5>
+                                <p class="card-text">Registro Maestro de Visitas</p>
+                                <a href="#" class="btn btn-primary" onclick="maestroVisitas()">Ejecutar</a>
+                            </div>
+                        </div>
+                    </div>
+    </main>
+
+
+
+    <script src="static/js/script.js"></script>
+</body>
+
+</html>
