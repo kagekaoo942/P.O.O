@@ -58,12 +58,26 @@
             <img class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title"> Ejercicio 4:</h5>
-                <input type="text" class="form-control mb-3" id="input4" placeholder="despache/cancele el pedido ">
+                <input type="text" class="form-control mb-3" id="input4" placeholder="Ingresar codigo ">
                 <p class="card-text">El filtro de inventario.</p>
-                <a href="#" class="btn btn-primary" onclick="validarDescuento()">Ejecutar</a>
+                <a href="#" class="btn btn-primary" onclick="verificarCodigo()">Ejecutar</a>
                 <div id="container4" class="mt-4 d-none">
                     <h5>Resultado:</h5>
                     <div id="result4" class="alert alert-success fw-bold"></div>
+                </div>
+            </div>
+        </div>
+        <!-- ejercicio 5 -->
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title"> Ejercicio 5:</h5>
+                <input type="text" class="form-control mb-3" id="input5" placeholder="ingresar precios ">
+                <p class="card-text">Filtro de presopuesto.</p>
+                <a href="#" class="btn btn-primary" onclick="simularCuotas()">Ejecutar</a>
+                <div id="container5" class="mt-4 d-none">
+                    <h5>Resultado:</h5>
+                    <div id="result5" class="alert alert-success fw-bold"></div>
                 </div>
             </div>
         </div>

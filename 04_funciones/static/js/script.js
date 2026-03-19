@@ -109,27 +109,59 @@ Limpia el input.
 let codigosValidos = ["VERANO2026", "PROMO50", "CLIENTEVIP"];
 
 function buscarCodigo(codigo) {
-    let mensaje = "Valido";
-
-}
-
-
-function validarDescuento() {
-    const container = document.getElementById("container4");
-    const result = document.getElementById("result4");
-    const input = document.getElementById("input4");
-
-    let accion = input.value.trim();
-    let resultado = buscarCodigo(accion);
-
-    for (let i = 0; i < codigosValidos.length; i++ ) {
-        if(){
-            
+    let mensaje = "Codigo invalido o expirado";
+    for (let i = 0; i < codigosValidos.length; i++) {
+        if (codigo === codigosValidos[i]) {
+            mensaje = "!Exito! codigo aceptado"
+            return "¡Exito! codigo aceptado";
+        } else {
+            mensaje = "Ingresa un codigo valido"
         }
 
     }
+    return mensaje
+}
 
 
+function verificarCodigo() {
+    let codigo = input.value;
+    let input = document.getElementById("input4")
+    let resultado = buscarCodigo(codigo);
+    const container = document.getElementById("container4");
+    const result = document.getElementById("result4");
+    result.textContent = resultado;
+    input.value = "";
+    container.classList.remove("d-none")
+
+
+
+}
+/*Ejercicio 6: Filtro de Presupuesto (for e if)
+Contexto: Una vitrina virtual tiene varios precios. El cliente ingresa cuánta plata tiene en el bolsillo, y el sistema le muestra solo los precios que le alcanza para pagar.
+Crea un arreglo de precios: let vitrina = [2500, 15000, 8000, 30000, 5000];
+Función Principal: Crea filtrarPrecios().
+Captura el número desde el input (este será el presupuesto del cliente. Recuerda usar Number()).
+Crea una variable opciones = "Te alcanza para los precios: ";
+Recorre el arreglo vitrina con un for.
+Dentro del ciclo, usa un if. Si el precio actual del arreglo es menor o igual (<=) a la plata que ingresó el cliente, súmalo a la variable opciones más un guion (-).
+Muestra el resultado en el textContent del párrafo.
+Limpia el input.
+*/
+function simularCuotas() {
+    let codigo = input.value;
+    const producto = document.getElementById("input5_1")
+    let valorProducto = parseInt(producto.value)
+    const container = document.getElementById("container5");
+    const result = document.getElementById("result5");
+    const cuota = document.getElementById("input5_2")
+    let registroPagos = "";
+    for (let i = 1; i <= 3; i++) {
+        registroPagos += producto.value + " - " + cuota.value + i + " | ";
+
+    }
+    result.textContent = resultado;
+    input.value = "";
+    container.classList.remove("d-none")
 }
 
 /*
