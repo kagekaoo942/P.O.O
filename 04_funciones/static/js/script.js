@@ -147,23 +147,72 @@ Dentro del ciclo, usa un if. Si el precio actual del arreglo es menor o igual (<
 Muestra el resultado en el textContent del párrafo.
 Limpia el input.
 */
-function simularCuotas() {
-    let codigo = input.value;
-    const producto = document.getElementById("input5_1")
-    let valorProducto = parseInt(producto.value)
-    const container = document.getElementById("container5");
-    const result = document.getElementById("result5");
-    const cuota = document.getElementById("input5_2")
+
+
+function calcularCuotas(valor, cuota) {
     let registroPagos = "";
     for (let i = 1; i <= 3; i++) {
-        registroPagos += producto.value + " - " + cuota.value + i + " | ";
-
+        registroPagos += `Cuota ${i} de ${cuota}: ${parseInt(valor / 3)} |`;
     }
+    return registroPagos;
+};
+function simularCuotas() {
+    const producto = document.getElementById("input5_1");
+    let valorProdcuto = parseInt(producto.value);
+    const cuotaInput = document.getElementById("input5_2");
+    let cuota = parseInt(cuotaInput.value);
+    const result = document.getElementById(result5);
+    const container = document.getElementById(container5);
+    let resultado = calcularCuotas(valorProdcuto, cuota)
     result.textContent = resultado;
-    input.value = "";
-    container.classList.remove("d-none")
+    producto.value = "";
+    cuotaInput.value = "";
+    container - classList.remove("d-none")
 }
 
+
+/*Ejercicio 6: Filtro de Presupuesto (for e if)
+Contexto: Una vitrina virtual tiene varios precios. El cliente ingresa cuánta plata tiene en el bolsillo, y el sistema le muestra solo los precios que le alcanza para pagar.
+Crea un arreglo de precios: let vitrina = [2500, 15000, 8000, 30000, 5000];
+Función Principal: Crea filtrarPrecios().
+Captura el número desde el input (este será el presupuesto del cliente. Recuerda usar Number()).
+Crea una variable opciones = "Te alcanza para los precios: ";
+Recorre el arreglo vitrina con un for.
+Dentro del ciclo, usa un if. Si el precio actual del arreglo es menor o igual (<=) a la plata que ingresó el cliente, súmalo a la variable opciones más un guion (-).
+Muestra el resultado en el textContent del párrafo.
+Limpia el input.
+ */
+
+let vitrina = [2500, 15000, 8000, 30000, 5000];
+let opciones = [];
+function comprobarPresupuesto(presupuesto) {
+    for (let i = 0; i <= vitrina.length; i++) {
+        if (presupuesto >= vitrina[i]) {
+            opciones.push(vitrina[i])
+        };
+    };
+if (opciones == "") {
+    return "No te alcanza para nada. ";
+} else {
+    return `Te alcanza para los precios: ${opciones.join(" - ")}`
+}
+}
+function filtrarPrecios() {
+    let input = document.getElementById("input6");
+    const result = document.getElementById("result6");
+    const container = document.getElementById(container6);
+    let dinero = parseInt(input.value);
+    if (isNaN(dinero)) {
+        alert("Ingresa valores valido. ");
+    } else {
+        let resultado = comprobarPresupuesto(dinero);
+        result.textContent = resultado;
+        input.value = "";
+        container.classList.remove("d-none")
+        opciones = [];
+    }
+
+}
 /*
 Ejemplo:
 function sumar(a, b) {
