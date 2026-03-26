@@ -191,11 +191,11 @@ function comprobarPresupuesto(presupuesto) {
             opciones.push(vitrina[i])
         };
     };
-if (opciones == "") {
-    return "No te alcanza para nada. ";
-} else {
-    return `Te alcanza para los precios: ${opciones.join(" - ")}`
-}
+    if (opciones == "") {
+        return "No te alcanza para nada. ";
+    } else {
+        return `Te alcanza para los precios: ${opciones.join(" - ")}`
+    }
 }
 function filtrarPrecios() {
     let input = document.getElementById("input6");
