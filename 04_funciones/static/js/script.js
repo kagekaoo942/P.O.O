@@ -50,7 +50,7 @@ function ingresarUrgencia() {
         let nombre = input.value;
         // resultado va a guardar el valor de nombre, envinadolo a la primera funcion
         let resultado = agregarUrgencia(nombre);
-
+// permite que la variable resultado cambie su texto de salida
         result.textContent = resultado;
         input.value = "";
         container.classList.remove("d-none");
